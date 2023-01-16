@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVel;
 
     [SerializeField]
     private Transform cameraTransform;
@@ -33,18 +35,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
-        move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        //move = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * move;
 
-        if (move != Vector3.zero)
+        if (move.magnitude >= 0.1f)
         {
-            gameObject.transform.forward = move;
+            float targetAngle = Mathf.Atan2(move.x,move.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVel, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f,angle,0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f,targetAngle,0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * Time.deltaTime * playerSpeed);
             anim.SetTrigger("walk");
-        }
-        else if(move == Vector3.zero )
-        {
-            anim.SetTrigger("notWalk");
         }
     }
     
