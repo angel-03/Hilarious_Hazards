@@ -48,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(moveDir.normalized * Time.deltaTime * playerSpeed);
             anim.SetTrigger("walk");
         }
+        else
+        {
+            anim.SetTrigger("notWalk");
+        }
     }
     
     void Jump()
