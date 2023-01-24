@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVel;
 
+    private bool check;
+
     [SerializeField]
     private Transform cameraTransform;
 
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        DoorInteract();
     }
     void FixedUpdate()
     {
@@ -70,5 +72,31 @@ public class PlayerMovement : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    IEnumerator DoorInteraction()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(check)
+            {
+                check = false;
+                DoorMechanics.check = true;
+                yield return new WaitForSeconds(0.1f);
+                DoorMechanics.check = false;
+            }
+        }
+    }
+    void DoorInteract()
+    {
+        StartCoroutine(DoorInteraction());   
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "Door")
+        {
+            check = true;
+        }
     }
 }
