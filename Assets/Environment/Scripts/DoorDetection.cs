@@ -6,10 +6,13 @@ public class DoorDetection : MonoBehaviour
 {
     void OnTriggerStay(Collider other)
     {
-        if(this.gameObject.name == "Front")
-            DoorMechanics.isFront = true;
+        if(other.gameObject.tag == "Player")
+        {
+            if(this.gameObject.name == "Front")
+                DoorMechanics.isFront = true;
          
-        else if(this.gameObject.name == "Back")
-            DoorMechanics.isFront = false;    
+            else if(this.gameObject.name == "Back")
+                DoorMechanics.isFront = false;    
+        }
     } 
 }

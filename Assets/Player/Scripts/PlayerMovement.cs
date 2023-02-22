@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator anim;
+    public GameObject deathCam;
+
     private Vector3 playerVelocity;
     private bool groundedPlayer = true;
     private float playerSpeed = 2.0f;
@@ -15,11 +17,23 @@ public class PlayerMovement : MonoBehaviour
     float turnSmoothVel;
 
     private bool check;
+    public static bool canMove;
 
     [SerializeField]
     private Transform cameraTransform;
 
+    public List<Collider> RagdollParts = new List<Collider>();
+    public List<Rigidbody> bodies = new List<Rigidbody>();
 
+
+
+    void Awake()
+    {
+        //SetRagdollParts();
+        //TurnOffRagdoll();
+        deathCam.SetActive(false);
+        canMove = true;
+    }
     private void Start()
     {
         //controller = gameObject.AddComponent<CharacterController>();
@@ -28,11 +42,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         DoorInteract();
+        Run();
     }
     void FixedUpdate()
     {
-        Movement();
-        Jump();
+        if(canMove)
+        {
+            Movement();
+            Jump();
+        }
     }
 
     void Movement()
@@ -65,13 +83,28 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
+        // if (Input.GetButtonDown("Jump") && groundedPlayer)
+        // {
+        //     playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        // }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    void Run()
+    {
+        if(Input.GetButtonDown("Fire3"))
+        {
+            playerSpeed = 5f;
+            anim.speed = 1.2f;
+        }
+           
+        if(Input.GetButtonUp("Fire3"))
+        {
+            playerSpeed = 2f;
+            anim.speed = 1f;
+        }
     }
 
     IEnumerator DoorInteraction()
@@ -80,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(check)
             {
+                Debug.Log("DoorInteraction!!!");
                 check = false;
                 DoorMechanics.check = true;
                 yield return new WaitForSeconds(0.1f);
@@ -98,5 +132,89 @@ public class PlayerMovement : MonoBehaviour
         {
             check = true;
         }
+    }
+
+    void SetRagdollParts()
+    {
+        Collider[] colliders = this.gameObject.GetComponentsInChildren<Collider>();
+
+        foreach(Collider c in colliders) 
+        {
+            if(c.gameObject != this.gameObject)
+            {
+                c.isTrigger = true;
+                RagdollParts.Add(c);
+            }
+        }
+    }
+
+    private void TurnOffRagdoll()
+    {
+
+        Rigidbody[] rigidbody = this.gameObject.GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody b in rigidbody)
+        {
+            if(b.gameObject != this.gameObject)
+            {
+        
+                bodies.Add(b);
+            }
+        }
+        foreach (Rigidbody b in bodies)
+        {
+            b.isKinematic = true;
+            b.detectCollisions = false;
+        }
+
+    }
+    
+    public void turnonnragdoll()
+    {
+        //playerrigidbody.useGravity =false;
+        //playerrigidbody.velocity = Vector3.zero;
+        //this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        anim.enabled = false;
+        anim.avatar = null;
+
+        foreach (Collider c in RagdollParts)
+        {
+            c.isTrigger = false;
+            c.attachedRigidbody.velocity = Vector3.zero;
+        }
+        foreach (Rigidbody b in bodies)
+        {
+            b.isKinematic = false;
+            b.detectCollisions = true;
+        }
+
+    }
+
+    public void TurnOnRagdoll()
+    {
+        //rb.useGravity = false;
+        //rb.velovity = Vector3.zero;
+        this.gameObject.GetComponent<CharacterController>().enabled = false;
+        anim.enabled = false;
+        anim.avatar = null;
+        foreach(Collider c in RagdollParts) 
+        {
+            c.isTrigger = true;
+            c.attachedRigidbody.velocity = Vector3.zero;
+        }
+    }
+
+    public void Death()
+    {
+        StartCoroutine(StartDeath());
+    }
+
+    IEnumerator StartDeath()
+    {
+        canMove = false;
+        deathCam.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        anim.SetTrigger("death");
+        // yield return new WaitForSeconds(5f);
+        // anim.SetTrigger("idle");
     }
 }
