@@ -6,6 +6,7 @@ public class Task : MonoBehaviour
 {
     public GameObject playerMovement;
     public static bool check;
+    public FrameTask ft;
 
     void LateUpdate()
     {
@@ -43,6 +44,10 @@ public class Task : MonoBehaviour
             check = true;
             FrameTask.selectedAnswer = 5;
             WaitTime();
+        }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            ft.ActivateAnswer();
         }
     }
 

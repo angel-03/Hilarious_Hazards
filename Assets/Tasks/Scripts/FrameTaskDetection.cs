@@ -12,6 +12,7 @@ public class FrameTaskDetection : MonoBehaviour
     public GameObject key3;
     public GameObject key4;
     public GameObject key5;
+    public GameObject hint;
 
     void OnTriggerStay(Collider other)
     {
@@ -24,6 +25,7 @@ public class FrameTaskDetection : MonoBehaviour
             key3.SetActive(true);
             key4.SetActive(true);
             key5.SetActive(true);
+            hint.SetActive(true);
         }
     }
 
@@ -38,6 +40,7 @@ public class FrameTaskDetection : MonoBehaviour
             key3.SetActive(false);
             key4.SetActive(false);
             key5.SetActive(false);
+            hint.SetActive(false);
         }
     }
 }
