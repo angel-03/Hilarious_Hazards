@@ -18,9 +18,9 @@ public class DoorMechanics : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();    
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        OpenDoor(check);  
+        OpenDoor(check);
     }
 
     void OpenDoor(bool check)

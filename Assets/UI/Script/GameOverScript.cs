@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class GameOverScript : MonoBehaviour
 {
     //public static int deathVariant;
+    public GameObject bulbUI;
+
     public Sprite missionCompleted;
     public Sprite missionFailed;
     public Sprite encountered;
@@ -26,6 +28,7 @@ public class GameOverScript : MonoBehaviour
 
     public void GameOver(int deathVariant)
     {
+        bulbUI.SetActive(false);
         switch(deathVariant)
         {
             case 0:
