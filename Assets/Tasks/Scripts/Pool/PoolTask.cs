@@ -62,6 +62,7 @@ public class PoolTask : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         gameUI.GetComponent<GameUi>().MissionCompleted();
+        GameUi.isPassed = true;
         this.gameObject.SetActive(false);
     }
 }

@@ -49,6 +49,7 @@ public class FrameTask : MonoBehaviour
             {
                 Debug.Log("You Won");
                 gameUI.GetComponent<GameUi>().MissionCompleted();
+                GameUi.isPassed = true;
                 this.gameObject.SetActive(false);
             }
             else

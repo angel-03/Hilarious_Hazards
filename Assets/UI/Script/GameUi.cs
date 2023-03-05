@@ -7,6 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameUi : MonoBehaviour
 {
     public GameObject gameOver;
+    public GameObject continueButton;
+    public static bool isPassed;
+
+    void Update()
+    {
+        if(isPassed)
+        {
+            continueButton.SetActive(true);
+        }
+    }
 
     public void MissionFailed()
     {
@@ -32,6 +42,8 @@ public class GameUi : MonoBehaviour
 
     public void Continue()
     {
+        isPassed = false;
+        continueButton.SetActive(false);
         gameOver.SetActive(false);
         PlayerMovement.canMove = true;
     }
