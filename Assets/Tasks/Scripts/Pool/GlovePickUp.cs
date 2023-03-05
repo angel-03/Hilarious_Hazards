@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DectectBulbs : MonoBehaviour
+public class GlovePickUp : MonoBehaviour
 {
-    public GameObject bulbUi;
+    public GameObject gloveUi;
 
     void Start()
     {
-        bulbUi.SetActive(false);    
+        gloveUi.SetActive(false);    
     }
-  
     void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.tag == "Player")
         {
-            bulbUi.SetActive(true);
-            BulbTask.bulbCount++;
-            BulbTask.totalBulbsCollected++;
+            gloveUi.SetActive(true);
+            PoolTask.hasTakenGloves = true;
             Destroy(this.gameObject);
         }    
     }
