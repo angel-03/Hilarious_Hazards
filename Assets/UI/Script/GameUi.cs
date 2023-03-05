@@ -10,6 +10,12 @@ public class GameUi : MonoBehaviour
     public GameObject continueButton;
     public static bool isPassed;
 
+    void Start()
+    {
+        isPassed = false; 
+        continueButton.SetActive(false);   
+    }
+
     void Update()
     {
         if(isPassed)

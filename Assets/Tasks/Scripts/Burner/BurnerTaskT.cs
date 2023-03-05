@@ -2,60 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Task : MonoBehaviour
+public class BurnerTaskT : MonoBehaviour
 {
     public GameObject playerMovement;
     public static bool check;
-    public FrameTask ft;
+    public BurnerTask burt;
 
     void LateUpdate()
     {
-        if(FrameTaskDetection.isFrameTask)
-            FrameTask1();
-        //BulbTask2();
+        BurnerTask4();
     }
 
-    void FrameTask1()
+    void BurnerTask4()
     {
-        
         if(Input.GetKeyDown(KeyCode.Keypad1))
         {
             check = true;
-            FrameTask.selectedAnswer = 1;
+            BurnerTask.selectedAnswer = 1;
             WaitTime();
         }
         if(Input.GetKeyDown(KeyCode.Keypad2))
         {
             check = true;
-            FrameTask.selectedAnswer = 2;
+            BurnerTask.selectedAnswer = 2;
             WaitTime();
         }
         if(Input.GetKeyDown(KeyCode.Keypad3))
         {
             check = true;
-            FrameTask.selectedAnswer = 3;
+            BurnerTask.selectedAnswer = 3;
             WaitTime();
         }
         if(Input.GetKeyDown(KeyCode.Keypad4))
         {
             check = true;
-            FrameTask.selectedAnswer = 4;
+            BurnerTask.selectedAnswer = 4;
             WaitTime();
         }
-        if(Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            check = true;
-            FrameTask.selectedAnswer = 5;
-            WaitTime();
-        }
-        if(Input.GetKeyDown(KeyCode.H))
-        {
-            ft.ActivateAnswer();
-        }
-        
+
+        // if(Input.GetKeyDown(KeyCode.H))
+        // {
+        //     ft.ActivateAnswer();
+        // }
     }
     
-
     void WaitTime()
     {
         StartCoroutine(Wait());
