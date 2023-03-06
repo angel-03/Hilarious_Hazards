@@ -18,12 +18,14 @@ public class GameOverScript : MonoBehaviour
     public Sprite bath;
 
     public GameObject gameOver;
+    public GameObject theEnd;
     Image deathImage; 
 
     void Start()
     {
         deathImage = gameOver.GetComponent<Image>();
         gameOver.SetActive(false);
+        theEnd.SetActive(false);
     }
 
     public void GameOver(int deathVariant)
@@ -53,5 +55,10 @@ public class GameOverScript : MonoBehaviour
                 deathImage.sprite = bath;
                 break;
         }
+    }
+
+    public void TheEnd()
+    {
+        theEnd.SetActive(true);
     }
 }

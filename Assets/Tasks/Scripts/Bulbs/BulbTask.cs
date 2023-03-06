@@ -35,6 +35,7 @@ public class BulbTask : MonoBehaviour
                 Debug.Log("You Won");
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
+                TasksTrack.tasksDone++;
                 this.gameObject.SetActive(false);
             }
             else if(bulbCount <= -1)
