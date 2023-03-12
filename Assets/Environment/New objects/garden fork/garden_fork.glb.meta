@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: d6dd7d0fb145ad14c9a7133b3786aac3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garden_Fork_Metal_Material
+    second: {fileID: 2100000, guid: 174d1da023a10674ab77a48d5fc330ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garden_Fork_Plastic_Material
+    second: {fileID: 2100000, guid: 8b4209d9f8228044595adf563df11397, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garden_Fork_Wood_Material
+    second: {fileID: 2100000, guid: 4eeac1cc050e2a0439b1f686d06cd8ce, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_1.normal
+    second: {fileID: 2800000, guid: 2a121f926beeed544bbff7aa02ee74d1, type: 3}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_3.normal
+    second: {fileID: 2800000, guid: af9de2dbe2b12bf4dbd563ae0dcec48c, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
