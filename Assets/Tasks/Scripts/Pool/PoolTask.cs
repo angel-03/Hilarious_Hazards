@@ -9,7 +9,8 @@ public class PoolTask : MonoBehaviour
     public static int wireCount;
 
     public PlayerMovement pm;
-    public GameObject gameUI;    
+    public GameObject gameUI;  
+    public GameObject detection;  
 
     public static int bulbCount = 0;
     private int totalBulbs = 5;
@@ -64,6 +65,6 @@ public class PoolTask : MonoBehaviour
         gameUI.GetComponent<GameUi>().MissionCompleted();
         GameUi.isPassed = true;
         TasksTrack.tasksDone++;
-        this.gameObject.SetActive(false);
+        detection.GetComponent<BoxCollider>().enabled = false;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BurnerTask : MonoBehaviour
 {
     public GameObject gameUI;
+    public GameObject detection;
     public PlayerMovement pm;
 
     int correctAnswer;
@@ -40,7 +41,7 @@ public class BurnerTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
-                this.gameObject.SetActive(false);
+                detection.GetComponent<BoxCollider>().enabled = false;
             }
             else
             {

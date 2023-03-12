@@ -6,6 +6,7 @@ public class FrameTask : MonoBehaviour
 {
     public GameObject frames;
     public GameObject gameUI;
+    public GameObject detection;
     public PlayerMovement pm;
 
     // public Sprite minecraft;
@@ -32,8 +33,8 @@ public class FrameTask : MonoBehaviour
         Debug.Log(correctAnswer);
         selectedAnswer = 0;
         //sp = answer.GetComponent<SpriteRenderer>();
-        //SetHint(correctAnswer);
         Reset();
+        SetHint(correctAnswer);
     }
 
     void Update()
@@ -51,7 +52,7 @@ public class FrameTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
-                this.gameObject.SetActive(false);
+                detection.GetComponent<BoxCollider>().enabled = false;
             }
             else
             {
@@ -94,7 +95,7 @@ public class FrameTask : MonoBehaviour
     public void ActivateAnswer()
     {
         answer.SetActive(true);
-        SetHint(correctAnswer);
+        //SetHint(correctAnswer);
     }
 
     IEnumerator Wait()

@@ -7,13 +7,17 @@ using UnityEngine.SceneManagement;
 public class GameUi : MonoBehaviour
 {
     public GameObject gameOver;
+    public GameObject pausePanel;
     public GameObject continueButton;
     public static bool isPassed;
+    public static bool isPaused;
 
     void Start()
     {
         isPassed = false; 
-        continueButton.SetActive(false);   
+        isPaused = false;
+        continueButton.SetActive(false); 
+        pausePanel.SetActive(false);  
     }
 
     void Update()
@@ -21,6 +25,11 @@ public class GameUi : MonoBehaviour
         if(isPassed)
         {
             continueButton.SetActive(true);
+        }
+        if(isPaused)
+        {
+            pausePanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -63,6 +72,13 @@ public class GameUi : MonoBehaviour
     public void ActivateScreen()
     {
         gameOver.SetActive(true);
+    }
+
+    public void ClosePausePanel()
+    {
+        pausePanel.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1;
     }
 
     IEnumerator Wait(int deathVariant)

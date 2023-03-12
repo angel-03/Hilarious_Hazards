@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1;
         //SetRagdollParts();
         //TurnOffRagdoll();
         deathCam.SetActive(false);
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         DoorInteract();
         Run();
+        PauseGame();
     }
     void FixedUpdate()
     {
@@ -216,5 +218,13 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger("death");
         // yield return new WaitForSeconds(5f);
         // anim.SetTrigger("idle");
+    }
+
+    void PauseGame()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GameUi.isPaused = true;  
+        }
     }
 }

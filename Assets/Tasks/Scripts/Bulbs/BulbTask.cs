@@ -9,6 +9,7 @@ public class BulbTask : MonoBehaviour
 {
     public PlayerMovement pm;
     public GameObject gameUI;
+    public GameObject detection;
 
     public static int bulbCount = 0;
     private int totalBulbs = 5;
@@ -36,7 +37,7 @@ public class BulbTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
-                this.gameObject.SetActive(false);
+                detection.GetComponent<BoxCollider>().enabled = false;
             }
             else if(bulbCount <= -1)
             {
