@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 90e54a72f1fdb1547884c8a8635526e3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clock-frame
+    second: {fileID: 2100000, guid: 16a7aa0aa37e63044bf7e4dbc347644d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clock-map
+    second: {fileID: 2100000, guid: dd8daaa0806e0334584a5d982a5d1f4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 1551aeca88a475a41b14c6246a7f7073, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: numbers
+    second: {fileID: 2100000, guid: e5f99354af270fe42b792ebf54d69760, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: second-hand
+    second: {fileID: 2100000, guid: 40ca0e71313a5cb449f588e999d0f49b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transparent
+    second: {fileID: 2100000, guid: d528930fc7236cd419547af47a2aba5b, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_3.normal
+    second: {fileID: 2800000, guid: 2492fabb112a9de48bd2f66e6dc49cde, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
