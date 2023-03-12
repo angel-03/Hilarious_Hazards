@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: c7684fcba5fa6bd43b2b6f98a2b1b9d5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BakedCycles
+    second: {fileID: 2100000, guid: cacbc226ea401a74ba7e4187b34d2f79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackbody
+    second: {fileID: 2100000, guid: 284b658b3ea3d7a43bed1a71d173fa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: 6ac04aa50bc09224fa1160d9abe57853, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 25d294d12d0f37347a33f51ebe8fee15, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
