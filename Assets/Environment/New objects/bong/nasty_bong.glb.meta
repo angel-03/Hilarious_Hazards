@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 0808ecc00072ed74290b9ac35211fd11
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_bottle
+    second: {fileID: 2100000, guid: 31a79e54c634f8a4c830a73e353971e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_nasty_water
+    second: {fileID: 2100000, guid: d08c507e5cdc6f34b86d9421cecbb1c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_slide
+    second: {fileID: 2100000, guid: 0ba1518d05fe89f40940db56c2a95e58, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0

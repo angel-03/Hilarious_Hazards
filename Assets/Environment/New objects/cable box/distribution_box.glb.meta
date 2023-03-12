@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: e34cd47b00c4d9243b6871cb592c84d6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DistirbuteBox_InnerBox
+    second: {fileID: 2100000, guid: 298f6af9f764b8845bdbbc74c044f434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DistirbuteBox_OutterBox
+    second: {fileID: 2100000, guid: a5655b2c2defceb4884c64133ae72982, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DistirbuteBox_Wire
+    second: {fileID: 2100000, guid: a60c250fe6710a14abdde51ff2cf18d9, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0

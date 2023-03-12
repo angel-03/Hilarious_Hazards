@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0e638f818ed06c446b7a544aa08ff000
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: books_kit
+    second: {fileID: 2100000, guid: 4259d0a1ac240ae419fdfab0fb3bd85e, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_0
+    second: {fileID: 2800000, guid: faf1f118b6ac4694584f08824684dcad, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
