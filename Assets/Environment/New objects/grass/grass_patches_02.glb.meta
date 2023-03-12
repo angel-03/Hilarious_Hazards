@@ -1,0 +1,72 @@
+fileFormatVersion: 2
+guid: 659c2169b94de7345b7b367927a3cb25
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass12
+    second: {fileID: 2100000, guid: 0f2a08ea453aedf439cffebeed1c5d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass12.001
+    second: {fileID: 2100000, guid: 7a0a634658343464284e659c4d74b411, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass12.002
+    second: {fileID: 2100000, guid: f78f5d058ed489c4ebc039a7d6ec0c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass12.003
+    second: {fileID: 2100000, guid: b3ec20c3698d74c4986ba84249e5b203, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass13
+    second: {fileID: 2100000, guid: 0d21ebaf6c03cdc4489c59f6a317b2ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass13.001
+    second: {fileID: 2100000, guid: da6682449b54cf749ae1a7cb3e0a0981, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass13.002
+    second: {fileID: 2100000, guid: 71466a943f2e7644da1d66591e025a71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass13.003
+    second: {fileID: 2100000, guid: 80e636d672102ec4495c5b1103d00671, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_0
+    second: {fileID: 2800000, guid: 918d12a976b65134586eee78aebbff08, type: 3}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_1
+    second: {fileID: 2800000, guid: 7fd2ee77ea2d24949905ac2029bf4160, type: 3}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_2
+    second: {fileID: 2800000, guid: e2df4b138c9633c44bffb514aa100ee2, type: 3}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_3
+    second: {fileID: 2800000, guid: 92099e875eddd164fbb3bdd332858163, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0

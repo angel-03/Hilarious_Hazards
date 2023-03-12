@@ -1,0 +1,77 @@
+fileFormatVersion: 2
+guid: c341210fb5a0d3943ab27f1e41904282
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle1
+    second: {fileID: 2100000, guid: baa0ca5b2f4f5534bbe763f6f1edf44f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle2
+    second: {fileID: 2100000, guid: 6b5e131d5d172e2469643bb808237740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle3
+    second: {fileID: 2100000, guid: 98290f27220bfb64fb44fc4a742228cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle4
+    second: {fileID: 2100000, guid: 7a88f9011a697844e92803001cde0708, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle5
+    second: {fileID: 2100000, guid: 4650cebf14c50a14c84d90ea8a0160fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SheetMetal1
+    second: {fileID: 2100000, guid: f8dd522aae59d434497549b8f8a5ec50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SheetMetal2
+    second: {fileID: 2100000, guid: f259afdc5e207b9428bc7c5030711307, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SheetMetal3
+    second: {fileID: 2100000, guid: 7ba0575b4be67964bbca7529c0c5e878, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SheetMetal4
+    second: {fileID: 2100000, guid: 5cc96ee89886b224db56a8504e9c6687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SheetMetal5
+    second: {fileID: 2100000, guid: 0cd7dbc82831d85418abd9d5e6e7cc32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenBase
+    second: {fileID: 2100000, guid: 47c58d92c5c479248b4398dbb7bed7b5, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_0
+    second: {fileID: 2800000, guid: 38d2b560ec7946a46ac9ea44adb5abac, type: 3}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: texture_1
+    second: {fileID: 2800000, guid: 13d0a1c6cea1f3f4a94eac0ca9cae13f, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
