@@ -29,6 +29,7 @@ public class FrameTask : MonoBehaviour
 
     void Start()
     {
+        frames.GetComponent<Rigidbody>().useGravity = false;
         correctAnswer = Random.Range(1,6);
         Debug.Log(correctAnswer);
         selectedAnswer = 0;
@@ -53,9 +54,11 @@ public class FrameTask : MonoBehaviour
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
                 detection.GetComponent<BoxCollider>().enabled = false;
+                detection.SetActive(false);
             }
             else
             {
+                frames.GetComponent<Rigidbody>().useGravity = true;
                 pm.Death();
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");

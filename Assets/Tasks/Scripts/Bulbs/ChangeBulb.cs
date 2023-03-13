@@ -13,6 +13,7 @@ public class ChangeBulb : MonoBehaviour
     {
         if(BulbTaskDetection.isBulbChanged)
         {
+            BulbTask.fixedBulb ++;
             this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
             //this.gameObject.GetComponent<BoxCollider>().enabled = false;
         }

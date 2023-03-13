@@ -6,7 +6,7 @@ public class DectectBulbs : MonoBehaviour
 {
     public GameObject bulbUi;
 
-    void Start()
+    void Awake()
     {
         bulbUi.SetActive(false);    
     }

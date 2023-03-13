@@ -13,12 +13,14 @@ public class BurnerTask : MonoBehaviour
     public GameObject Fire2;
     public GameObject Fire3;
     public GameObject Fire4;
+    public GameObject BigFire;
 
     public static int selectedAnswer;
 
     void Start()
     {
         correctAnswer = Random.Range(1,4);
+        BigFire.SetActive(false);
         Debug.Log(correctAnswer);
         selectedAnswer = 0;
         Reset();
@@ -42,9 +44,11 @@ public class BurnerTask : MonoBehaviour
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
                 detection.GetComponent<BoxCollider>().enabled = false;
+                detection.SetActive(false);
             }
             else
             {
+                BigFire.SetActive(true);
                 pm.Death();
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");

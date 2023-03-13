@@ -66,5 +66,6 @@ public class PoolTask : MonoBehaviour
         GameUi.isPassed = true;
         TasksTrack.tasksDone++;
         detection.GetComponent<BoxCollider>().enabled = false;
+        detection.SetActive(false);
     }
 }

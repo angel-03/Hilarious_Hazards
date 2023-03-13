@@ -16,12 +16,13 @@ public class TasksTrack : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Tasks" + tasksDone);
         if(tasksDone == totalTasks)
         {
             GameUi.isPassed = false;
             Debug.Log("GameOver");
             gameUi.SetActive(false);
-            gameOver.GetComponent<GameOverScript>().TheEnd();
+            //gameOver.GetComponent<GameOverScript>().TheEnd();
         }
     }
 }
