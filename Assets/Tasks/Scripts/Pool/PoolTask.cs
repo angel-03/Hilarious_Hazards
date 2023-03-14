@@ -10,11 +10,10 @@ public class PoolTask : MonoBehaviour
 
     public PlayerMovement pm;
     public GameObject gameUI;  
-    public GameObject detection;  
+    public GameObject detection; 
+    public GameObject glovesUi;
+    public GameObject pool;
 
-    public static int bulbCount = 0;
-    private int totalBulbs = 5;
-    public static int totalBulbsCollected=0;
     //public TMP_Text countUI;
 
     void Start() 
@@ -64,7 +63,9 @@ public class PoolTask : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gameUI.GetComponent<GameUi>().MissionCompleted();
         GameUi.isPassed = true;
+        glovesUi.SetActive(false);
         TasksTrack.tasksDone++;
+        pool.GetComponent<BoxCollider>().isTrigger = false;
         detection.GetComponent<BoxCollider>().enabled = false;
         detection.SetActive(false);
     }

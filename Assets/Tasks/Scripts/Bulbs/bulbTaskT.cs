@@ -29,8 +29,10 @@ public class bulbTaskT : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.001f);
         check = false;
         BulbTaskDetection.isBulbChanged = false;
+        if(BulbTask.bulbCount == 0)
+            check = true;
     }
 }

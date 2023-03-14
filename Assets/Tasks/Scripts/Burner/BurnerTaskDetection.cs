@@ -19,11 +19,11 @@ public class BurnerTaskDetection : MonoBehaviour
         {
             burnerTaskT.GetComponent<BurnerTaskT>().enabled = true;
             burnerTaskCamera.SetActive(true);
-            key1.SetActive(true);
-            key2.SetActive(true);
-            key3.SetActive(true);
-            key4.SetActive(true);
-            hint.SetActive(true);
+            // key1.SetActive(true);
+            // key2.SetActive(true);
+            // key3.SetActive(true);
+            // key4.SetActive(true);
+            // hint.SetActive(true);
         }
     }
 
@@ -33,11 +33,11 @@ public class BurnerTaskDetection : MonoBehaviour
         {
             burnerTaskT.GetComponent<BurnerTaskT>().enabled = false;
             burnerTaskCamera.SetActive(false);
-            key1.SetActive(false);
-            key2.SetActive(false);
-            key3.SetActive(false);
-            key4.SetActive(false);
-            hint.SetActive(false);
+            // key1.SetActive(false);
+            // key2.SetActive(false);
+            // key3.SetActive(false);
+            // key4.SetActive(false);
+            // hint.SetActive(false);
         }
     }
 }

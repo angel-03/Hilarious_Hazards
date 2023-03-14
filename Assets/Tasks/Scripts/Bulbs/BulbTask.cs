@@ -10,35 +10,45 @@ public class BulbTask : MonoBehaviour
     public PlayerMovement pm;
     public GameObject gameUI;
     public GameObject detection;
+    public GameObject bulbUi;
 
     public static int fixedBulb = 0;
     public static int bulbCount = 0;
-    private int totalBulbs = 5;
+    int totalBulbs = 5;
     public static int totalBulbsCollected=0;
     public TMP_Text countUI;
 
     void Start() 
     {
+        bulbUi.SetActive(false); 
         bulbCount = 0;
         fixedBulb = 0;
     }
 
     void LateUpdate() 
     {
-        countUI.SetText(bulbCount.ToString());   
+        countUI.SetText(bulbCount.ToString());
+        if(!GameUi.isCanvasOn)
+        {
+            if(bulbCount > 0)
+                bulbUi.SetActive(true); 
+        }  
         CheckAnswer();
     }
 
     void CheckAnswer()
     {
+        Debug.Log(fixedBulb);
         if(bulbTaskT.check)
         {
-            if(fixedBulb == totalBulbs)
+            if(fixedBulb >= totalBulbs)
             {
                 Debug.Log("You Won");
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
+                bulbUi.SetActive(false);
+                fixedBulb = 0;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangeBulb : MonoBehaviour
 {
+    public GameObject bulb;
     void LateUpdate()
     {
         ChangeBulbs();
@@ -15,7 +16,6 @@ public class ChangeBulb : MonoBehaviour
         {
             BulbTask.fixedBulb ++;
             this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            //this.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
