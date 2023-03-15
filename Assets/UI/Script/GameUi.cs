@@ -60,6 +60,11 @@ public class GameUi : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void Continue()
     {
         isPassed = false;
