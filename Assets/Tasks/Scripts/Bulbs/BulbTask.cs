@@ -51,8 +51,11 @@ public class BulbTask : MonoBehaviour
                 fixedBulb = 0;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);
-            }
-            else if(bulbCount <= -1)
+            } 
+        }
+        else if(bulbTaskT.deathCheck)
+        {
+            if(bulbCount <= -1)
             {
                 pm.Death();
                 StartCoroutine(Wait());

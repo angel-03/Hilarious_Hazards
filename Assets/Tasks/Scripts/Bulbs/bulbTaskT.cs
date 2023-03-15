@@ -5,6 +5,7 @@ using UnityEngine;
 public class bulbTaskT : MonoBehaviour
 {
     public static bool check;
+    public static bool deathCheck;
     void LateUpdate()
     {
         BulbTask2();
@@ -14,6 +15,7 @@ public class bulbTaskT : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
+            deathCheck = true;
             check = true;
             if(BulbTask.bulbCount > 0)
                 BulbTaskDetection.isBulbChanged = true;
@@ -29,10 +31,12 @@ public class bulbTaskT : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.001f);
+        yield return new WaitForSeconds(0.005f);
         check = false;
         BulbTaskDetection.isBulbChanged = false;
         if(BulbTask.bulbCount == 0)
             check = true;
+        yield return new WaitForSeconds(0.1f);
+        deathCheck = false;
     }
 }
