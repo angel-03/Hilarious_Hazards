@@ -7,6 +7,7 @@ public class BurnerTask : MonoBehaviour
     public GameObject gameUI;
     public GameObject detection;
     public PlayerMovement pm;
+    public GameObject burnerTaskT;
 
     int correctAnswer;
     public GameObject Fire1;
@@ -43,6 +44,7 @@ public class BurnerTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
+                burnerTaskT.GetComponent<BurnerTaskT>().enabled = false;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);
             }

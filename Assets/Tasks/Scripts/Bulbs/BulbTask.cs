@@ -11,6 +11,7 @@ public class BulbTask : MonoBehaviour
     public GameObject gameUI;
     public GameObject detection;
     public GameObject bulbUi;
+    public GameObject task;
 
     public static int fixedBulb = 0;
     public static int bulbCount = 0;
@@ -49,6 +50,7 @@ public class BulbTask : MonoBehaviour
                 TasksTrack.tasksDone++;
                 bulbUi.SetActive(false);
                 fixedBulb = 0;
+                task.GetComponent<bulbTaskT>().enabled = false;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);
             } 

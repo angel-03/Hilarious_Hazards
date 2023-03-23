@@ -13,6 +13,7 @@ public class PoolTask : MonoBehaviour
     public GameObject detection; 
     public GameObject glovesUi;
     public GameObject pool;
+    public GameObject poolTask;
 
     //public TMP_Text countUI;
 
@@ -65,6 +66,7 @@ public class PoolTask : MonoBehaviour
         GameUi.isPassed = true;
         glovesUi.SetActive(false);
         TasksTrack.tasksDone++;
+        poolTask.GetComponent<WreTask>().enabled = false;
         pool.GetComponent<BoxCollider>().isTrigger = false;
         detection.GetComponent<BoxCollider>().enabled = false;
         detection.SetActive(false);

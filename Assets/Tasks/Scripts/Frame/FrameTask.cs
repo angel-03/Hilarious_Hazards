@@ -7,6 +7,7 @@ public class FrameTask : MonoBehaviour
     public GameObject frames;
     public GameObject gameUI;
     public GameObject detection;
+    public GameObject task;
     public PlayerMovement pm;
 
     // public Sprite minecraft;
@@ -53,6 +54,7 @@ public class FrameTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
+                task.GetComponent<Task>().enabled = false;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);
             }
