@@ -16,6 +16,7 @@ public class ChangeBulb : MonoBehaviour
         {
             BulbTask.fixedBulb ++;
             this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(2).gameObject.SetActive(false);
         }
     }
 }

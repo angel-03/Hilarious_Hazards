@@ -52,6 +52,7 @@ public class BurnerTask : MonoBehaviour
             {
                 BigFire.SetActive(true);
                 pm.Death();
+                GameUi.deathType = 4;
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");
             }

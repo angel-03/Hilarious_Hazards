@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject modesPanel;
     public GameObject creditsPanel;
+    public GameObject controlsPanel;
 
     public GameObject musicButton;
     public Sprite musicOnSprite;
@@ -59,6 +60,18 @@ public class UIScript : MonoBehaviour
     {
         mainMenuPanel.SetActive(true);
         creditsPanel.SetActive(false);
+    }
+
+    public void OnClickControlsButton()
+    {
+        mainMenuPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+
+    public void OnClickCloseControlsButton()
+    {
+        mainMenuPanel.SetActive(true);
+        controlsPanel.SetActive(false);
     }
 
     void ChangeSprite(bool isMusicOn)

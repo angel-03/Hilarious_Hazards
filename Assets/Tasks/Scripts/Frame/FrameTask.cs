@@ -23,7 +23,7 @@ public class FrameTask : MonoBehaviour
     public GameObject FallGuys;
     public GameObject GTA;
 
-    public GameObject answer;
+    //public GameObject answer;
     int correctAnswer;
 
     public static int selectedAnswer;
@@ -62,6 +62,7 @@ public class FrameTask : MonoBehaviour
             {
                 frames.GetComponent<Rigidbody>().useGravity = true;
                 pm.Death();
+                GameUi.deathType = 1;
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");
             }
@@ -99,7 +100,7 @@ public class FrameTask : MonoBehaviour
 
     public void ActivateAnswer()
     {
-        answer.SetActive(true);
+        //answer.SetActive(true);
         //SetHint(correctAnswer);
     }
 

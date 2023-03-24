@@ -60,6 +60,7 @@ public class BulbTask : MonoBehaviour
             if(bulbCount <= -1)
             {
                 pm.Death();
+                GameUi.deathType = 2;
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");
             }

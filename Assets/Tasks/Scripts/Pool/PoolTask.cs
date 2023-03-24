@@ -47,6 +47,7 @@ public class PoolTask : MonoBehaviour
             else
             {
                 pm.Death();
+                GameUi.deathType = 3;
                 StartCoroutine(Wait());
                 Debug.Log("You Lost");
             }
