@@ -60,40 +60,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   quality:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   enable:
     m_OverrideState: 1
     m_Value: 1
   length:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.15
   opacity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   distanceScaleFactor:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
   maxDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 50
   minDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   fadeDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5
   fadeInDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   rayBias:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.2
   thicknessScale:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.15
   m_SampleCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 10
 --- !u!114 &11400000
 MonoBehaviour:
@@ -134,7 +134,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   skyIntensityMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   exposure:
     m_OverrideState: 1
@@ -144,10 +144,10 @@ MonoBehaviour:
     m_Value: 1
   upperHemisphereLuxValue:
     m_OverrideState: 0
-    m_Value: 0.49205452
+    m_Value: 2.3803363
   upperHemisphereLuxColor:
     m_OverrideState: 0
-    m_Value: {x: 0.5, y: 0.44713345, z: 0.41904113}
+    m_Value: {x: 0.49792105, y: 0.5, z: 0.4155554}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
@@ -162,7 +162,7 @@ MonoBehaviour:
     m_Value: 0
   hdriSky:
     m_OverrideState: 1
-    m_Value: {fileID: 8900000, guid: dea35129ed799314ebfe4b3cc8fa7ec9, type: 3}
+    m_Value: {fileID: 8900000, guid: e01f860a15768ec41be07e810596d178, type: 3}
   distortionMode:
     m_OverrideState: 0
     m_Value: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   quality:
     m_OverrideState: 1
     m_Value: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   intensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.2
   scatter:
     m_OverrideState: 0
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   cloudType:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   skyAmbientMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   windOrientation:
     m_OverrideState: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
   m_Name: Exposure
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 1
@@ -480,17 +480,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   quality:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   rayTracing:
     m_OverrideState: 0
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 4
   directLightingStrength:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.5
   radius:
     m_OverrideState: 1
     m_Value: 1.5
@@ -518,31 +518,31 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   m_StepCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 6
   m_FullResolution:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   m_MaximumRadiusInPixels:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 40
   m_BilateralUpsample:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   m_DirectionCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   m_RayLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 3
   m_SampleCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   m_Denoise:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   m_DenoiserRadius:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
 --- !u!114 &7542669330009093999
 MonoBehaviour:
@@ -556,10 +556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f086a068d4c5889438831b3ae9afc11c, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   toeStrength:
     m_OverrideState: 0
     m_Value: 0
