@@ -9,6 +9,7 @@ public class FrameTask : MonoBehaviour
     public GameObject detection;
     public GameObject task;
     public PlayerMovement pm;
+    public GameObject taskDone;
 
     // public Sprite minecraft;
     // public Sprite nfs;
@@ -30,6 +31,7 @@ public class FrameTask : MonoBehaviour
 
     void Start()
     {
+        taskDone.SetActive(false);
         frames.GetComponent<Rigidbody>().useGravity = false;
         correctAnswer = Random.Range(1,6);
         Debug.Log(correctAnswer);
@@ -53,6 +55,7 @@ public class FrameTask : MonoBehaviour
                 Debug.Log("You Won");
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
+                taskDone.SetActive(true);
                 TasksTrack.tasksDone++;
                 task.GetComponent<Task>().enabled = false;
                 detection.GetComponent<BoxCollider>().enabled = false;

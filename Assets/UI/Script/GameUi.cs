@@ -26,6 +26,8 @@ public class GameUi : MonoBehaviour
 
     void Start()
     {
+        // Hides the cursor...
+        Cursor.visible = false;
         isDead = false;
         isPassed = false; 
         isPaused = false;
@@ -45,6 +47,7 @@ public class GameUi : MonoBehaviour
         }
         if(isPaused)
         {
+            Cursor.visible = true;
             pausePanel.SetActive(true);
             Time.timeScale = 0;
         }
@@ -60,6 +63,7 @@ public class GameUi : MonoBehaviour
 
     public void MissionFailed()
     {
+        Cursor.visible = true;
         isCanvasOn = true;
         isDead = true;
         objective.SetActive(false);
@@ -70,6 +74,7 @@ public class GameUi : MonoBehaviour
 
     public void MissionCompleted()
     {
+        Cursor.visible = true;
         isCanvasOn = true;
         objective.SetActive(false);
         gameOver.SetActive(true);
@@ -78,11 +83,13 @@ public class GameUi : MonoBehaviour
 
     public void MainMenu()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 
     public void Retry()
     {
+        Cursor.visible = false;
         isCanvasOn = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -94,6 +101,7 @@ public class GameUi : MonoBehaviour
 
     public void Continue()
     {
+        Cursor.visible = false;
         isPassed = false;
         isCanvasOn = false;
         continueButton.SetActive(false);
@@ -103,6 +111,7 @@ public class GameUi : MonoBehaviour
 
     public void GameOverUI(int deathVariant)
     {
+        Cursor.visible = true;
         isCanvasOn = true;
         gameOver.SetActive(true);
         StartCoroutine(Wait(deathVariant));
@@ -115,6 +124,7 @@ public class GameUi : MonoBehaviour
 
     public void ClosePausePanel()
     {
+        Cursor.visible = false;
         pausePanel.SetActive(false);
         isPaused = false;
         Time.timeScale = 1;

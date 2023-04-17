@@ -15,11 +15,13 @@ public class BurnerTask : MonoBehaviour
     public GameObject Fire3;
     public GameObject Fire4;
     public GameObject BigFire;
+    public GameObject taskDone;
 
     public static int selectedAnswer;
 
     void Start()
     {
+        taskDone.SetActive(false);
         correctAnswer = Random.Range(1,4);
         BigFire.SetActive(false);
         Debug.Log(correctAnswer);
@@ -44,6 +46,7 @@ public class BurnerTask : MonoBehaviour
                 gameUI.GetComponent<GameUi>().MissionCompleted();
                 GameUi.isPassed = true;
                 TasksTrack.tasksDone++;
+                taskDone.SetActive(true);
                 burnerTaskT.GetComponent<BurnerTaskT>().enabled = false;
                 detection.GetComponent<BoxCollider>().enabled = false;
                 detection.SetActive(false);

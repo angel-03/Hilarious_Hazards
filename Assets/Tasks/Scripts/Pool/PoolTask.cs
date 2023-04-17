@@ -14,11 +14,13 @@ public class PoolTask : MonoBehaviour
     public GameObject glovesUi;
     public GameObject pool;
     public GameObject poolTask;
+    public GameObject taskDone;
 
     //public TMP_Text countUI;
 
     void Start() 
     {
+        taskDone.SetActive(false);
         wireCount = 1;
         hasTakenGloves = false;  
         hasClickedWire = false;
@@ -67,6 +69,7 @@ public class PoolTask : MonoBehaviour
         GameUi.isPassed = true;
         glovesUi.SetActive(false);
         TasksTrack.tasksDone++;
+        taskDone.SetActive(true);
         poolTask.GetComponent<WreTask>().enabled = false;
         pool.GetComponent<BoxCollider>().isTrigger = false;
         detection.GetComponent<BoxCollider>().enabled = false;

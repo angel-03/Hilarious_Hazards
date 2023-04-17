@@ -7,7 +7,6 @@ public class PoolTaskDetection : MonoBehaviour
     public GameObject poolTaskCamera;
     public GameObject poolTask;
     public GameObject objective;
-
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Player")
